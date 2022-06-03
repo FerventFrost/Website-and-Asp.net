@@ -1,0 +1,106 @@
+﻿@model IEnumerable<Create_Users_DataGrid.Models.User_Image>
+
+@{
+    ViewBag.Title = "Index";
+}
+<div style="display: flex; flex-direction: column;">
+    <div style="margin-bottom: -10px; align-self: flex-end; margin-right: 5px; ">
+        
+        @using (Html.BeginForm("Index", "CreateView", FormMethod.Get))
+        {
+            <div class="search-box">
+
+                <input type="search" name="search" class="search-input" placeholder="Start Looking For Something!">
+                <a class="search-btn" href="#">
+                    <i class="fa fa-search"></i>
+                </a>
+            </div>
+        }
+        <div class="tabel-container">
+            <table class="table" id="MyTable">
+                <thead>
+                    <tr class="fixed">
+                        <th onclick="foo(this.value)" style="cursor: pointer;" name="UserName" value="UserName">
+                            User Name
+                        </th>
+                        <th onclick="foo(this.value)" style="cursor: pointer;" name="NationalID" value="NationalID">
+                            National ID
+                        </th>
+                        <th>
+                            Image
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.UserName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.NationalID)
+                            </td>
+                            <td>
+
+                                <a href="@Html.DisplayFor(modelItem => item.ImageURL)"><img src="@item.ImageURL" class="thumbnail" height="100" width="100" /></a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+        <form action="/CreateView/Index" name="OrderForm">
+            <input type="text" value="Defualt" name="Method" id="Method" hidden />
+            <input type="text" value="UserName" name="Field" id="Field" hidden />
+            <input type="submit" hidden />
+        </form>
+    </div>
+<div onload="CallData()" id="demo"></div>
+<script>
+/*
+        var tbody = document.getElementById("MyTable").getElementsByTagName("tbody")[0];
+
+        var newrow = tbody.insertRow();
+        var newcell = newrow.insertCell();
+        var newText = document.createTextNode('new row');
+        newcell.appendChild(newText);
+
+        newcell = newrow.insertCell();
+        newText = document.createTextNode("616513");
+        newcell.appendChild(newText);
+        
+        newcell = newrow.insertCell();
+    newText = document.createTextNode('new row');
+    newelemt = document.createElement(HTMLLinkElement("http://localhost:62165/Image/thumb-1920-651136212734484.jpg"));
+    newcell.appendChild(newelemt);
+
+
+    */
+
+    function CallData() {
+        let url = 64132165;
+        console.log(url);
+        fetch(url)
+            .then(res => res.json())
+            .then((out) => {
+                console.log('Checkout this JSON! ', out);
+            })
+            .catch(err => { throw err });
+
+        document.getElementById("demo").innerHTML =
+            "Page hostname is: " + window.location.hostname;
+    }
+
+    let count = 0;
+    function foo(name) {
+        count += 1;
+        console.log(name);
+        if (count % 3 == 1) { document.getElementById("Method").setAttribute("value", "Asc"); document.getElementById("Field").setAttribute("value", name);}
+        else if (count % 3 == 2) { document.getElementById("Method").setAttribute("value", "Decs"); document.getElementById("Field").setAttribute("value", name);}
+        else { document.getElementById("Method").setAttribute("value", "Defualt"); document.getElementById("Field").setAttribute("value", name);}
+        document.OrderForm.submit();
+    }
+
+</script>

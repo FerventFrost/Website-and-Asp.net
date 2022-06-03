@@ -1,0 +1,49 @@
+﻿@model Create_Users_DataGrid.Models.User_Image
+
+@{
+    ViewBag.Title = "Create";
+}
+<div>
+    <div class="create-container">
+        <form class="form1" action="/CreateView/Create" method="post" enctype="multipart/form-data" name="CreateFrom" onsubmit="return ValidatForm()">
+            @Html.AntiForgeryToken()
+            <div class="First-part">
+                <p class="Create" align="center">Create User</p>
+
+                <input class="input-design " type="text" align="center" placeholder="Name" name="UserName" />
+                <input class="input-design" type="number" align="center" placeholder="Socail ID" name="NationalID" />
+                <div class="btn" style="margin-left: 50px;">
+                    <label for="Filebtn" class="Btn-Custom Btn-Link">Upload  Image</label>
+                    <input type="file" class="File-btn" id="Filebtn" name="GetImage" />
+                    <input type="submit" class="Btn-Custom" align="center" value="Create" />
+                </div>
+
+            </div>
+            <div class="Second-part">
+                <img src="@Url.Content("~/Image/UsedImage/horizon-house.png")" id="ShowImage" style="width:100%;height:100%; border-top-right-radius: 1.5em;  border-bottom-right-radius: 1.5em;">
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<script>    
+    //Preview Image Function
+    Filebtn.onchange = evt => {
+        const [file] = Filebtn.files;
+        if (file) {
+            ShowImage.src = URL.createObjectURL(file);
+        }
+    }
+    //Form Validation
+    function ValidatForm() {
+        let UserName = document.forms["CreateFrom"]["UserName"].value;
+        let NationalID = document.forms["CreateFrom"]["NationalID"].value;
+        let GetImage = document.forms["CreateFrom"]["GetImage"].value;
+
+        if (UserName == "" || NationalID == "" || GetImage == "") {
+            alert("You Must filled out all the data");
+            return false;
+        }
+    }
+</script>

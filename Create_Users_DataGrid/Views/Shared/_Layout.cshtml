@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/CSS/CreateStyle.css">
+    <link href="~/CSS/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/CSS/TableStyle.css">
+    <link rel="stylesheet" href="~/CSS/Components.css">
+    <link rel="stylesheet" href="~/CSS/MainBody.css">
+    <link href="~/CSS/hazem.css" rel="stylesheet" />
+    <link href="~/CSS/searchbar.css" rel="stylesheet" />
+    <title>@ViewBag.Title - xd</title>
+</head>
+<body>
+    <div id="menu-nav">
+        <div id="navigation-bar">
+            <ul>
+                <li class="active"><a href="/CreateView/Create" id="create" class="hazem"><i class="fa fa-user-plus"></i><span> Add User</span></a></li>
+                <li ><a href="/CreateView/Index" class="baher" id="view"><i class="fa fa-users"></i> <span> Show Users</span></a></li>
+            </ul>
+        </div>
+
+    </div>
+    @RenderBody()
+    @RenderSection("scripts", required: false)
+    
+    <script src="~/Scripts/hazem.js"></script>
+</body>
+
+</html>

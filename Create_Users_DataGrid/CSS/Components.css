@@ -1,0 +1,32 @@
+﻿
+.Btn-Custom {
+    width: 245px;
+    padding: 8px 0px;
+    cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    border: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.11);
+    background: linear-gradient(to right, #A6748F, #784B6C);
+    margin: 5px;
+}
+
+.Btn-Link {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.File-btn {
+    content: 'Upload Image';
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    white-space: nowrap;
+    width: 1px;
+}

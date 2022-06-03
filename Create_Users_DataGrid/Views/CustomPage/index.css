@@ -1,0 +1,68 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body
+{
+    font-family: Mukta, sans-serif;
+    font-size: 0.9rem;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: #C66E62;
+    color: #000000;
+}
+
+tabel-container
+{
+    border-radius: 1.5em;
+    background-color: #FFF7F8;
+    box-shadow: 0px 10px 5px #8C5E58;
+    width: fit-content;
+}
+
+table
+{
+    border-collapse: collapse;
+    background-color: #FFF7F8;
+    box-shadow: -5px 10px 10px #8C5E58;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 1em ;
+}
+
+table thead
+{
+    border-top-left-radius: 1em ;
+    border-top-right-radius: 1em ;
+    box-shadow: 0px 5px 15px #8C5E58;
+}
+
+table th
+{
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.1rem;
+    font-weight: 900;  
+}
+
+table td
+{
+    padding: 1rem 3rem;
+}
+
+table tr:nth-child(even) {
+    background-color: #E3D1D0;
+  }
+
+.ID
+{ 
+    padding: 1rem;
+    padding-left: 3rem;
+}

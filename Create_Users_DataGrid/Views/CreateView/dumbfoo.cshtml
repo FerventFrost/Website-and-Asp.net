@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Create_Users_DataGrid.Models.User_Image>
+
+@{
+    ViewBag.Title = "dumbfoo";
+}
+
+
+@foreach(var item in Model)
+            {
+                    @item.UserName
+                    @item.NationalID
+                    <img src="@item.ImageURL"  width="50px" height="50px"/>
+            }

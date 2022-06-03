@@ -1,0 +1,109 @@
+
+.create-container {
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    position: relative;
+    width: 650px; /* 400px*/
+    height: 350px;
+    /*margin: 10em auto;*/
+    border-radius: 1.5em;
+    box-shadow: 0px 11px 35px 2px #A6748E;
+    /*box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);*/
+}
+
+.First-part
+{
+    background-color: #FFF7F8; /* or #ffff*/
+    width: 350px;
+    height: 100%;
+    border-top-left-radius: 1.5em;
+    border-bottom-left-radius: 1.5em;
+}
+
+.Second-part
+{   
+    background-color: #FFF7F8;  /* or #F2EAF5 D6BBE0*/
+    width: 300px;
+    height: 100%;
+    border-top-right-radius: 1.5em;
+    border-bottom-right-radius: 1.5em;
+}
+form.form1 {
+    display: flex;
+}
+
+.Create   {
+    padding-top: 40px;
+    color: #8C5E58;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.input-design {
+width: 76%;
+color: rgb(38, 50, 56);
+font-weight: 700;
+font-size: 14px;
+letter-spacing: 1px;
+background: rgba(136, 126, 126, 0.04);
+padding: 10px 20px;
+border: none;
+border-radius: 20px;
+outline: none;
+box-sizing: border-box;
+border: 2px solid rgba(0, 0, 0, 0.02);
+margin-bottom: 50px;
+margin-left: 46px;
+text-align: center;
+margin-bottom: 27px;
+font-family: 'Ubuntu', sans-serif;
+}
+
+.input-design:focus {
+    border: 2px solid rgba(0, 0, 0, 0.18) !important;  
+}
+
+.btn
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 50px;
+}
+
+.File-btn
+{
+    content: 'Upload Image';
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.submit 
+{
+    cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    background: linear-gradient(to right, #C66E62, #FF7E6B);
+    border: 0;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+    margin: 5px;
+    line-height: 30px;
+    width: 70%;
+    margin-left: 50px;
+}
+
+@media (max-width: 600px) {
+    .main {
+        border-radius: 0px;
+    }
+}

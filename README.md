@@ -27,3 +27,5 @@ Project about upload photos and display it in table.
 ## Video
 
 https://youtu.be/KbhxXVO-RIQ
+
+![Screenshot_611](https://user-images.githubusercontent.com/90336445/171917773-a3ffcf05-b1c2-44a5-9a4e-c4ad4fdec177.png)
